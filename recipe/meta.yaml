@@ -1,20 +1,20 @@
 {% set name = "alphashape" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 201657dfa147118c09ab231f1abafcac74247c0a4fccd431312541a71bc074d5
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 33d2bf4b7c4eeb413e071521d38535441f25218afc12a8804ac693d9e93bb94e
 
 build:
   number: 0
   noarch: python
   entry_points:
     - alphashape=alphashape.cli:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,13 +35,13 @@ test:
     - alphashape --help
 
 about:
-  home: "https://github.com/bellockk/alphashape"
+  home: https://github.com/bellockk/alphashape
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Toolbox for generating alpha shapes."
-  doc_url: "https://alphashape.readthedocs.io/en/latest/"
-  dev_url: "https://github.com/bellockk"
+  summary: Toolbox for generating alpha shapes.
+  doc_url: https://alphashape.readthedocs.io/en/latest/
+  dev_url: https://github.com/bellockk
 
 extra:
   recipe-maintainers:
