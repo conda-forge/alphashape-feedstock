@@ -5,7 +5,7 @@ Home: https://github.com/bellockk/alphashape
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Toolbox for generating alpha shapes.
 
