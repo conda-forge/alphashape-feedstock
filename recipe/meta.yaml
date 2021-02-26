@@ -23,10 +23,11 @@ requirements:
   run:
     - click >=6.0
     - click-log >=0.3.2
-    - python
+    - python >= 3.8
     - scipy >=1.0.0
     - shapely >=1.4.0
     - geopandas >=0.6.2
+    - numpy >= 1.6
 
 test:
   imports:
@@ -46,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - ngodber
+    - bellockk
