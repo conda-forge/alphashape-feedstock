@@ -1,5 +1,5 @@
 {% set name = "alphashape" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fba80d88dc1b6cd307e3078beab6455aeb54d015db450790786a4f8ef76c86a5
+  sha256: 6993fe9da2753a3ce2c625f39b7dda495e462ae04cf1f29b67c81a8e15ca73b0
 
 build:
   number: 0
