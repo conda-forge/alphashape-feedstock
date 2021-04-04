@@ -28,6 +28,9 @@ requirements:
     - shapely >=1.4.0
     - geopandas >=0.6.2
     - numpy >=1.6
+    - trimesh >=3.9.8
+    - rtree >=0.9.7
+    - networkx >=2.5
 
 test:
   imports:
