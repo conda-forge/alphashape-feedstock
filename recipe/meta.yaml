@@ -1,5 +1,5 @@
 {% set name = "alphashape" %}
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6993fe9da2753a3ce2c625f39b7dda495e462ae04cf1f29b67c81a8e15ca73b0
+  sha256: 3ec6eb868c9f199e006cdfd5dddfdafc214eeb5d8b9a9f3eef94046043002b54
 
 build:
   number: 0
@@ -28,6 +28,9 @@ requirements:
     - shapely >=1.4.0
     - geopandas >=0.6.2
     - numpy >=1.6
+    - trimesh >=3.9.8
+    - rtree >=0.9.7
+    - networkx >=2.5
 
 test:
   imports:
