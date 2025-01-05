@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7a27340afc5f8ed301577acec46bb0cf2bada5410045f7289142e735ef6977ec
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - alphashape=alphashape.cli:main
@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
     - click >=6.0
     - click-log >=0.3.2
-    - python >=3.8
+    - python >={{ python_min }}
     - scipy >=1.0.0
     - shapely >=1.4.0
     - geopandas >=0.6.2
@@ -33,6 +33,8 @@ requirements:
     - networkx >=2.5
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - alphashape
   commands:
